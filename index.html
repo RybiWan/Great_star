@@ -15,7 +15,25 @@
       font-family:"Montserrat", system-ui, sans-serif;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+    body{
+      margin:0;
+      color:var(--text);
+      scroll-behavior:smooth;
+      position: relative;
+      background: var(--bg);
+    }
+
+    /* Фоновый дымчатый силуэт девушки */
+    body::before{
+      content: "";
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: url('https://i.ibb.co/ZYW3VTp/silhouette-girl.png') center/cover no-repeat;
+      opacity: 0.05; /* дымка */
+      z-index: -1;
+      pointer-events: none;
+    }
+
     a{text-decoration:none;color:var(--accent)}
     .container{max-width:1200px;margin:0 auto;padding:32px}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
@@ -42,9 +60,9 @@
     .btn{display:inline-block;padding:14px 24px;border-radius:14px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;transition:.3s}
     .btn:hover{opacity:.8;transform:translateY(-2px)}
     @media(max-width:900px){.hero,.grid-2{grid-template-columns:1fr}}
-    /* Form Section */
     #form-section{margin-top:40px;opacity:0;transform:translateY(20px);transition:all 0.8s ease;}
     #form-section.visible{opacity:1;transform:translateY(0);}
+    #form-section h2{margin-top:0;margin-bottom:16px;}
   </style>
 </head>
 <body>
@@ -118,7 +136,11 @@
 
     <section id="form-section" class="card">
       <h2>Запись на услуги</h2>
-      <div id="b24-form-container"></div>
+      <p>Выберите удобное время и оставьте свои контакты. Мы свяжемся с вами для подтверждения записи.</p>
+      <div id="b24-form-container" style="margin-top:16px;"></div>
+      <div style="margin-top:16px">
+        <a class="btn" href="https://t.me/great_beauty8" target="_blank">Написать в Telegram</a>
+      </div>
     </section>
 
     <footer id="contacts">
