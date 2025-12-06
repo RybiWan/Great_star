@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Лазерная эпиляция | Great Star</title>
-  <meta name="description" content="Лазерная эпиляция на аппарате Palomar Vectus в салоне красоты Great Star. Рассчитайте стоимость процедуры.">
+  <title>Лазерная эпиляция — Great Star</title>
+  <meta name="description" content="Лазерная эпиляция на аппарате Palomar Vectus в салоне красоты Great Star. Информация о процедуре, преимущества, противопоказания.">
   <style>
     :root{
       --accent:#d946ef;
@@ -15,14 +15,7 @@
       font-family:"Montserrat", system-ui, sans-serif;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      color:var(--text);
-      scroll-behavior:smooth;
-      position: relative;
-      background: var(--bg);
-      overflow-x: hidden;
-    }
+    body{margin:0;color:var(--text);background:var(--bg);font-family:"Montserrat", system-ui, sans-serif;}
     a{text-decoration:none;color:var(--accent)}
     .container{max-width:1200px;margin:0 auto;padding:32px}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
@@ -32,14 +25,11 @@
     nav a:hover{color:var(--accent)}
     h1,h2,h3,p,ul,li{margin:0;padding:0}
     h1,h2,h3{color:var(--accent)}
-    ul{list-style:disc;padding-left:20px}
-    .card{background:var(--card);border-radius:20px;padding:26px;box-shadow:0 16px 40px rgba(0,0,0,.3);backdrop-filter:blur(8px);opacity:0;transform:translateY(20px);transition:all 0.8s ease;}
-    .card.visible{opacity:1;transform:translateY(0);}
+    ul{list-style:disc;padding-left:20px;margin-top:8px}
+    .card{background:var(--card);border-radius:20px;padding:26px;margin-top:20px;box-shadow:0 16px 40px rgba(0,0,0,.3);backdrop-filter:blur(8px);}
     .btn{display:inline-block;padding:14px 24px;border-radius:14px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;transition:.3s;margin-top:16px}
     .btn:hover{opacity:.8;transform:translateY(-2px)}
-    label{display:block;font-weight:500;margin-bottom:6px}
-    select{width:100%;padding:8px 12px;border-radius:10px;border:none;background:#222;color:#eee;font-size:15px}
-    @media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+    @media(max-width:900px){.card{padding:20px}}
   </style>
 </head>
 <body>
@@ -55,119 +45,58 @@
       <nav>
         <a href="index.html">Главная</a>
         <a href="laser-prices.html">Прайс</a>
-        <a href="permanent-makeup.html">Перманентный макияж</a>
       </nav>
     </header>
 
     <section class="card" style="margin-top:32px">
       <h1>Лазерная эпиляция на аппарате Palomar Vectus</h1>
-      <p style="margin-top:12px;">Современная лазерная эпиляция на аппарате Palomar Vectus — эффективное удаление нежелательных волос с лица и тела. Процедура безопасна, быстра и подходит для большинства типов кожи. Для достижения оптимального результата рекомендуем несколько сеансов.</p>
-      
+      <p style="margin-top:12px">
+        Лазерная эпиляция — это современный метод удаления нежелательных волос с любого участка тела. 
+        Процедура безопасна, эффективна и подходит для разных типов кожи.
+      </p>
+
+      <h2 style="margin-top:20px">О аппарате Palomar Vectus</h2>
+      <p style="margin-top:8px">
+        Palomar Vectus — передовой диодный лазер, обеспечивающий точное воздействие на волосяные фолликулы с минимальным дискомфортом. 
+        Аппарат позволяет проводить процедуры быстрее, а результат сохраняется надолго.
+      </p>
+      <ul>
+        <li>Сокращение количества сеансов благодаря высокой мощности</li>
+        <li>Система охлаждения для защиты кожи</li>
+        <li>Подходит для всех типов кожи, включая смуглую</li>
+        <li>Минимальный дискомфорт во время процедуры</li>
+      </ul>
+
+      <h2 style="margin-top:20px">Условия процедуры</h2>
+      <ul>
+        <li>Перед процедурой кожа должна быть чистой и сухой, без косметики</li>
+        <li>Рекомендуется не загорать и избегать солярия за 2 недели до сеанса</li>
+        <li>После процедуры возможна лёгкая покраснение, которая проходит в течение нескольких часов</li>
+        <li>Количество сеансов зависит от зоны и типа волос</li>
+      </ul>
+
+      <h2 style="margin-top:20px">Противопоказания</h2>
+      <ul>
+        <li>Беременность и лактация</li>
+        <li>Онкологические заболевания</li>
+        <li>Сахарный диабет в стадии декомпенсации</li>
+        <li>Заболевания кожи в активной фазе (экзема, псориаз, герпес)</li>
+        <li>Приём некоторых фотосенсибилизирующих препаратов</li>
+      </ul>
+
+      <h2 style="margin-top:20px">Преимущества лазерной эпиляции</h2>
+      <ul>
+        <li>Длительный эффект по сравнению с традиционным бритьём или воском</li>
+        <li>Минимальный риск врастания волос</li>
+        <li>Быстрая процедура, подходящая для разных зон</li>
+        <li>Эстетически гладкая кожа после сеанса</li>
+      </ul>
+
       <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn" href="#calculator-section">Прайс / Калькулятор</a>
+        <a class="btn" href="laser-prices.html">Прайс / Калькулятор</a>
         <a class="btn" href="https://t.me/great_beauty8" target="_blank">Записаться в Telegram</a>
       </div>
     </section>
-
-    <!-- Калькулятор / Прайс -->
-    <section class="card" style="margin-top:32px" id="calculator-section">
-      <h2>Калькулятор цены лазерной эпиляции</h2>
-      <p>Выберите зоны, чтобы рассчитать стоимость процедуры.</p>
-
-      <div style="display:grid;gap:16px;margin-top:16px">
-        <!-- Лицо -->
-        <label>Лицо:
-          <select id="face" onchange="updatePrice()">
-            <option value="0">Выберите зону</option>
-            <option value="1800">Верхняя губа — 1800 ₽</option>
-            <option value="1800">Подбородок — 1800 ₽</option>
-            <option value="5000">Лицо полностью — 5000 ₽</option>
-            <option value="1500">Щеки — 1500 ₽</option>
-            <option value="1600">Бакенбарды — 1600 ₽</option>
-            <option value="2000">Шея 1/2 — 2000 ₽</option>
-            <option value="2900">Шея полностью — 2900 ₽</option>
-            <option value="1600">Лоб или щеки — 1600 ₽</option>
-            <option value="1300">Брови и межбровная — 1300 ₽</option>
-            <option value="1300">Нос — 1300 ₽</option>
-          </select>
-        </label>
-
-        <!-- Туловище -->
-        <label>Туловище:
-          <select id="body" onchange="updatePrice()">
-            <option value="0">Выберите зону</option>
-            <option value="3000">Подмышки — 3000 ₽</option>
-            <option value="2800">Плечи — 2800 ₽</option>
-            <option value="1900">Декольте — 1900 ₽</option>
-            <option value="3200">Грудь полностью — 3200 ₽</option>
-            <option value="1500">Ареолы — 1500 ₽</option>
-            <option value="2000">Белая линия живота — 2000 ₽</option>
-            <option value="3600">Живот полностью — 3600 ₽</option>
-            <option value="3000">Поясница — 3000 ₽</option>
-            <option value="3000">Спина 1/3 — 3000 ₽</option>
-            <option value="4500">Спина полностью — 4500 ₽</option>
-          </select>
-        </label>
-
-        <!-- Руки -->
-        <label>Руки:
-          <select id="arms" onchange="updatePrice()">
-            <option value="0">Выберите зону</option>
-            <option value="2800">Руки до локтя — 2800 ₽</option>
-            <option value="4500">Кисти рук с пальцами — 4500 ₽</option>
-            <option value="3500">Пальцы рук — 3500 ₽</option>
-            <option value="4800">Руки полностью — 4800 ₽</option>
-          </select>
-        </label>
-
-        <!-- Бикини -->
-        <label>Бикини:
-          <select id="bikini" onchange="updatePrice()">
-            <option value="0">Выберите зону</option>
-            <option value="3900">Тотальное бикини — 3900 ₽</option>
-            <option value="2500">Классическое бикини — 2500 ₽</option>
-            <option value="1600">Межъягодичная зона — 1600 ₽</option>
-            <option value="1500">Половые губы — 1500 ₽</option>
-          </select>
-        </label>
-
-        <!-- Ноги -->
-        <label>Ноги:
-          <select id="legs" onchange="updatePrice()">
-            <option value="0">Выберите зону</option>
-            <option value="2900">Ягодицы — 2900 ₽</option>
-            <option value="3800">Голени с коленями — 3800 ₽</option>
-            <option value="1200">Колени — 1200 ₽</option>
-            <option value="4200">Бедра полностью — 4200 ₽</option>
-            <option value="6000">Ноги полностью — 6000 ₽</option>
-            <option value="2600">Бедра одна сторона — 2600 ₽</option>
-            <option value="1300">Подъём стопы с пальчиками — 1300 ₽</option>
-            <option value="1800">Пальцы ног — 1800 ₽</option>
-          </select>
-        </label>
-      </div>
-
-      <h3 style="margin-top:16px" id="total">Итого: 0 ₽</h3>
-      <a class="btn" href="https://t.me/great_beauty8" target="_blank">Записаться в Telegram</a>
-    </section>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", ()=>{
-      document.querySelectorAll(".card").forEach((el,i)=>{
-        setTimeout(()=>el.classList.add("visible"), i*150);
-      });
-    });
-
-    function updatePrice() {
-      const face = parseInt(document.getElementById('face').value);
-      const body = parseInt(document.getElementById('body').value);
-      const arms = parseInt(document.getElementById('arms').value);
-      const bikini = parseInt(document.getElementById('bikini').value);
-      const legs = parseInt(document.getElementById('legs').value);
-      const total = face + body + arms + bikini + legs;
-      document.getElementById('total').textContent = `Итого: ${total.toLocaleString()} ₽`;
-    }
-  </script>
 </body>
 </html>
