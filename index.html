@@ -21,17 +21,19 @@
       scroll-behavior:smooth;
       position: relative;
       background: var(--bg);
+      overflow-x: hidden;
     }
 
     /* Фоновый дымчатый силуэт девушки */
-    body::before{
-      content: "";
+    #bg-silhouette{
       position: fixed;
-      top:0; left:0; right:0; bottom:0;
+      top:0; left:0; width:100%; height:100%;
       background: url('https://i.ibb.co/ZYW3VTp/silhouette-girl.png') center/cover no-repeat;
       opacity: 0.05; /* дымка */
       z-index: -1;
       pointer-events: none;
+      transform: translateY(0);
+      transition: transform 0.1s linear;
     }
 
     a{text-decoration:none;color:var(--accent)}
@@ -66,6 +68,8 @@
   </style>
 </head>
 <body>
+  <div id="bg-silhouette"></div>
+
   <div class="container">
     <header>
       <div class="brand">
@@ -96,7 +100,7 @@
         <h3>Контакты</h3>
         <ul class="contact-list">
           <li><strong>Адрес:</strong> улица Шмитовский, дом 16, строение 1</li>
-          <li><strong>Телефон:</strong> +7 901 468-11-90</li>
+          <li><strong>Телефон:</strong> <a href="tel:+79014681190">+7 901 468-11-90</a></li>
           <li><strong>Telegram:</strong> <a href="https://t.me/great_beauty8" target="_blank">@great_beauty8</a></li>
         </ul>
       </aside>
@@ -159,6 +163,13 @@
         setTimeout(()=>el.classList.add("visible"), 300 + i*150);
       });
       document.querySelector("#form-section").classList.add("visible");
+    });
+
+    // Движение фонового силуэта при скролле (параллакс)
+    window.addEventListener("scroll", ()=>{
+      const scrollY = window.scrollY;
+      const bg = document.getElementById("bg-silhouette");
+      bg.style.transform = `translateY(${scrollY * 0.1}px)`;
     });
 
     // Подключение Bitrix24 формы
