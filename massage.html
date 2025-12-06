@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Массаж — Great Star</title>
+  <meta name="description" content="Массаж в салоне Great Star — расслабление, восстановление, профессиональные техники массажа.">
+  <style>
+    :root{
+      --accent:#d946ef;
+      --bg:#0f0f11;
+      --text:#eee;
+      --muted:#9ca3af;
+      --card:#1a1a1d;
+      font-family:"Montserrat", system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--text);
+      scroll-behavior:smooth;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    #bg-silhouette{
+      position: fixed;
+      top:0; left:0; width:100%; height:100%;
+      background: url('https://i.ibb.co/ZYW3VTp/silhouette-girl.png') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: -1;
+      pointer-events: none;
+      transform: translateY(0);
+      transition: transform 0.1s linear;
+    }
+    a{text-decoration:none;color:var(--accent)}
+    .container{max-width:1200px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#ec4899,#d946ef);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px;box-shadow:0 8px 20px rgba(217,70,239,.35)}
+    nav a{margin-left:24px;font-weight:500;color:var(--text);transition:.3s}
+    nav a:hover{color:var(--accent)}
+    h1,h2,h3,p,ul,li{margin:0;padding:0}
+    h1,h2,h3{color:var(--accent)}
+    ul{list-style:disc;padding-left:20px}
+    .card{background:var(--card);border-radius:20px;padding:26px;box-shadow:0 16px 40px rgba(0,0,0,.3);backdrop-filter:blur(8px);opacity:0;transform:translateY(20px);transition:all 0.8s ease;}
+    .card.visible{opacity:1;transform:translateY(0);}
+    .btn{display:inline-block;padding:14px 24px;border-radius:14px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;transition:.3s}
+    .btn:hover{opacity:.8;transform:translateY(-2px)}
+  </style>
+</head>
+<body>
+  <div id="bg-silhouette"></div>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GS</div>
+        <div>
+          <div style="font-weight:700">Great Star</div>
+          <div style="font-size:13px;color:var(--muted)">Салон красоты</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="card" style="margin-top:32px">
+      <h1>Массаж</h1>
+      <p>Массаж в салоне Great Star помогает расслабиться, снять напряжение и восстановить энергетический баланс. Наши мастера используют профессиональные техники для достижения максимального эффекта.</p>
+    </section>
+
+    <section class="card" style="margin-top:24px" id="services">
+      <h2>Виды массажа</h2>
+      <ul>
+        <li>Классический массаж для расслабления мышц.</li>
+        <li>Антицеллюлитный массаж для коррекции фигуры.</li>
+        <li>Массаж лица для тонуса и сияния кожи.</li>
+        <li>Массаж спины и шеи для снятия напряжения.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top:24px" id="form-section">
+      <h2>Запишитесь на массаж</h2>
+      <a class="btn" href="https://t.me/great_beauty8" target="_blank">Написать в Telegram</a>
+    </section>
+
+    <footer id="contacts" class="card" style="margin-top:40px;text-align:center">
+      © Great Star — Все права защищены
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+      document.querySelectorAll(".card").forEach((el,i)=>{
+        setTimeout(()=>el.classList.add("visible"), i*150);
+      });
+    });
+    window.addEventListener("scroll", ()=>{
+      const scrollY = window.scrollY;
+      const bg = document.getElementById("bg-silhouette");
+      bg.style.transform = `translateY(${scrollY * 0.1}px)`;
+    });
+  </script>
+</body>
+</html>
