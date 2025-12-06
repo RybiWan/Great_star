@@ -1,0 +1,93 @@
+<section class="card" style="margin-top:32px">
+  <h2>Калькулятор цены лазерной эпиляции</h2>
+  
+  <div style="display:grid;gap:16px;margin-top:16px;">
+    
+    <!-- Лицо -->
+    <label>Лицо:
+      <select id="face" onchange="updatePrice()">
+        <option value="0">Выберите зону</option>
+        <option value="1800">Верхняя губа — 1800 ₽</option>
+        <option value="1800">Подбородок — 1800 ₽</option>
+        <option value="5000">Лицо полностью — 5000 ₽</option>
+        <option value="1500">Щеки — 1500 ₽</option>
+        <option value="1600">Бакенбарды — 1600 ₽</option>
+        <option value="2000">Шея 1/2 — 2000 ₽</option>
+        <option value="2900">Шея полностью — 2900 ₽</option>
+        <option value="1600">Лоб или щеки — 1600 ₽</option>
+        <option value="1300">Брови и межбровная — 1300 ₽</option>
+        <option value="1300">Нос — 1300 ₽</option>
+      </select>
+    </label>
+    
+    <!-- Туловище -->
+    <label>Туловище:
+      <select id="body" onchange="updatePrice()">
+        <option value="0">Выберите зону</option>
+        <option value="3000">Подмышки — 3000 ₽</option>
+        <option value="2800">Плечи — 2800 ₽</option>
+        <option value="1900">Декольте — 1900 ₽</option>
+        <option value="3200">Грудь полностью — 3200 ₽</option>
+        <option value="1500">Ареолы — 1500 ₽</option>
+        <option value="2000">Белая линия живота — 2000 ₽</option>
+        <option value="3600">Живот полностью — 3600 ₽</option>
+        <option value="3000">Поясница — 3000 ₽</option>
+        <option value="3000">Спина 1/3 — 3000 ₽</option>
+        <option value="4500">Спина полностью — 4500 ₽</option>
+      </select>
+    </label>
+    
+    <!-- Руки -->
+    <label>Руки:
+      <select id="arms" onchange="updatePrice()">
+        <option value="0">Выберите зону</option>
+        <option value="2800">Руки до локтя — 2800 ₽</option>
+        <option value="4500">Кисти рук с пальцами — 4500 ₽</option>
+        <option value="3500">Пальцы рук — 3500 ₽</option>
+        <option value="4800">Руки полностью — 4800 ₽</option>
+      </select>
+    </label>
+    
+    <!-- Бикини -->
+    <label>Бикини:
+      <select id="bikini" onchange="updatePrice()">
+        <option value="0">Выберите зону</option>
+        <option value="3900">Тотальное бикини — 3900 ₽</option>
+        <option value="2500">Классическое бикини — 2500 ₽</option>
+        <option value="1600">Межъягодичная зона — 1600 ₽</option>
+        <option value="1500">Половые губы — 1500 ₽</option>
+      </select>
+    </label>
+    
+    <!-- Ноги -->
+    <label>Ноги:
+      <select id="legs" onchange="updatePrice()">
+        <option value="0">Выберите зону</option>
+        <option value="2900">Ягодицы — 2900 ₽</option>
+        <option value="3800">Голени с коленями — 3800 ₽</option>
+        <option value="1200">Колени — 1200 ₽</option>
+        <option value="4200">Бедра полностью — 4200 ₽</option>
+        <option value="6000">Ноги полностью — 6000 ₽</option>
+        <option value="2600">Бедра одна сторона — 2600 ₽</option>
+        <option value="1300">Подъём стопы с пальчиками — 1300 ₽</option>
+        <option value="1800">Пальцы ног — 1800 ₽</option>
+      </select>
+    </label>
+    
+  </div>
+
+  <h3 style="margin-top:16px" id="total">Итого: 0 ₽</h3>
+  <a class="btn" href="https://t.me/great_beauty8" target="_blank">Записаться в Telegram</a>
+</section>
+
+<script>
+  function updatePrice() {
+    const face = parseInt(document.getElementById('face').value);
+    const body = parseInt(document.getElementById('body').value);
+    const arms = parseInt(document.getElementById('arms').value);
+    const bikini = parseInt(document.getElementById('bikini').value);
+    const legs = parseInt(document.getElementById('legs').value);
+    const total = face + body + arms + bikini + legs;
+    document.getElementById('total').textContent = `Итого: ${total.toLocaleString()} ₽`;
+  }
+</script>
